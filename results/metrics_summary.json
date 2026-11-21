@@ -1,0 +1,77 @@
+{
+  "device": "cuda",
+  "seed": 42,
+  "mlp_classifier": {
+    "test_acc_pct": 89.57,
+    "orthogonality_errors": {
+      "W1": {
+        "shape": [
+          256,
+          784
+        ],
+        "WTW_minus_I_fro": 553.9462,
+        "WWT_minus_I_fro": 553.4694
+      },
+      "W2": {
+        "shape": [
+          64,
+          256
+        ],
+        "WTW_minus_I_fro": 72.1263,
+        "WWT_minus_I_fro": 70.7828
+      },
+      "W3": {
+        "shape": [
+          10,
+          64
+        ],
+        "WTW_minus_I_fro": 13.9211,
+        "WWT_minus_I_fro": 11.8236
+      }
+    },
+    "frozen_decoder_metrics": {
+      "test_mse": 0.017865721136331558,
+      "test_psnr": 18.293149948120117,
+      "test_ssim": 0.7039878368377686
+    }
+  },
+  "epoch_times_s": {
+    "Vanilla AE": 2.213,
+    "Sparse AE": 2.416,
+    "VAE": 2.927,
+    "Vanilla GAN": 4.154,
+    "DCGAN": 8.041,
+    "DDPM": 28.275
+  },
+  "latencies_ms_batch64": {
+    "Vanilla AE": 0.591,
+    "Sparse AE": 0.462,
+    "VAE": 0.385,
+    "Vanilla GAN": 0.446,
+    "DCGAN": 1.922,
+    "DDPM": 3993.06
+  },
+  "reconstruction": {
+    "Vanilla AE": {
+      "test_mse": 0.006473698187619448,
+      "test_psnr": 23.01972770690918,
+      "test_ssim": 0.8565636873245239
+    },
+    "Sparse AE": {
+      "test_mse": 0.0044807870872318745,
+      "test_psnr": 24.603641510009766,
+      "test_ssim": 0.8779005408287048
+    },
+    "VAE": {
+      "test_mse": 0.0150190694257617,
+      "test_psnr": 19.124801635742188,
+      "test_ssim": 0.749039351940155
+    }
+  },
+  "fid_scores": {
+    "VAE": 81.53,
+    "Vanilla GAN": 149.07,
+    "DCGAN": 30.17,
+    "DDPM": 25.13
+  }
+}
